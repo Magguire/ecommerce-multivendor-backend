@@ -30,7 +30,7 @@ public class TransactionController {
 
         List<Transaction> transactions = this.transactionService.findTransactionsBySellerId(seller);
 
-        return new ResponseEntity<List<Transaction>>(transactions,HttpStatus.OK);
+        return new ResponseEntity<List<Transaction>>(transactions, HttpStatus.OK);
 
     }
 
@@ -39,6 +39,8 @@ public class TransactionController {
 
         List<Transaction> transactions = this.transactionService.getAllTransactions();
 
-        return new ResponseEntity<List<Transaction>>(transactions,HttpStatus.OK);
+        return new ResponseEntity<List<Transaction>>(transactions, HttpStatus.OK);
+
+    }
 
 }

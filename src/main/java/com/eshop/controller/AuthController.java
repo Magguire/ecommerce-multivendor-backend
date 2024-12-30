@@ -25,6 +25,8 @@ public class AuthController {
     @PostMapping("/signup")
     public ResponseEntity<AuthResponse> createUserHandler(@RequestBody SignupRequest signupRequest) throws Exception {
 
+        System.out.println("Signup Request: " + signupRequest);
+
         String jwt = this.authService.createUser(signupRequest);
 
         AuthResponse authResponse = new AuthResponse();
